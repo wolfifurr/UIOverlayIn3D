@@ -27,7 +27,7 @@ func _enter_tree():
 	
 	add_control_to_container(EditorPlugin.CONTAINER_SPATIAL_EDITOR_MENU,options)
 
-func _scene_changed_signal():
+func _scene_changed_signal(_scene_root: Node):
 	_change_viewport(current_viewport)
 
 func _change_viewport(i: int):	
