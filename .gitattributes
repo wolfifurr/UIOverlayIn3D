@@ -1,13 +1,9 @@
-# Set default line endings to LF
+# Normalize line endings for all text files
 * text=auto eol=lf
 
-# Exclude all root files and folders from the downloaded archive
-/* export-ignore
-/.gitattributes export-ignore
+# Exclude everything from the zip download
+/** export-ignore
 
-# Include only the addons folder and its contents
-/addons export-un-ignore
-/addons/** export-un-ignore
-
-# (Optional) Include LICENSE in the download
-/LICENSE export-un-ignore
+# Re-include only the addons folder and its contents
+/addons !export-ignore
+/addons/** !export-ignore
